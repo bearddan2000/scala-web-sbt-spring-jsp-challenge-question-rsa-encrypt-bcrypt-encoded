@@ -6,7 +6,7 @@ import javax.xml.bind.DatatypeConverter;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 class RSAPasswordEncoder
-  extends org.springframework.security.crypto.scrypt.SCryptPasswordEncoder
+  extends org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
   with PasswordEncoder {
 
     val keypair: KeyPair =  RSAUtils.generateRSAKeyPair();
